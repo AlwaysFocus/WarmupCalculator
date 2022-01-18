@@ -89,7 +89,7 @@ export default function App() {
               <Input
                 flex={1}
                 onChangeText={(v) => setWorkingSetWeight(parseInt(v))}
-                value={workingSetWeight.toString()}
+                value={workingSetWeight}
                 placeholder="Enter Working Set Weight"
               />
               <IconButton
