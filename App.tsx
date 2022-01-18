@@ -110,12 +110,12 @@ export default function App() {
               />
             </HStack>
             <VStack space={2}>
-              {warmup.map((set, itemI) => (
+              {warmup.map((set, setI) => (
                 <HStack
                   w="100%"
                   justifyContent="space-between"
                   alignItems="center"
-                  key={set.weight + itemI.toString()}
+                  key={set.weight + setI.toString()}
                 >
                   <Checkbox
                     // isChecked={set.isCompleted}
@@ -135,7 +135,7 @@ export default function App() {
                         color: "coolGray.50"
                       }}
                     >
-                      {set.weight}
+                      Weight: {set.weight}lbs - Reps: {set.reps}
                     </Text>
                   </Checkbox>
                   <IconButton
@@ -149,7 +149,7 @@ export default function App() {
                         color="trueGray.400"
                       />
                     }
-                    onPress={() => handleDelete(itemI)}
+                    onPress={() => handleDelete(setI)}
                   />
                 </HStack>
               ))}
